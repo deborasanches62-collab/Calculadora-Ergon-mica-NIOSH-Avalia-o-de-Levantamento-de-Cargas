@@ -1,3 +1,52 @@
+## Como executar a Calculadora NIOSH
+
+### 1. Pré-requisitos
+
+- **Python 3.8 ou superior** instalado no computador ([baixar Python](https://www.python.org/downloads/))
+- **Git** (opcional, apenas se quiser clonar o repositório pelo terminal)
+
+### 2. Baixe o projeto
+
+- Baixe o ZIP do repositório pelo GitHub e extraia, **ou** clone com:
+   ```
+   git clone https://github.com/seuusuario/seurepositorio.git
+   ```
+
+### 3. Instale as dependências
+
+Abra o terminal/prompt de comando na pasta do projeto e execute:
+```
+pip install -r requirements.txt
+```
+Se for gerar o executável, instale também:
+```
+pip install pyinstaller
+```
+
+### 4. Execute a calculadora
+
+Entre na pasta `src` e rode:
+```
+python app.py
+```
+O navegador abrirá automaticamente com a calculadora.
+
+---
+
+## Como gerar um executável (.exe) para Windows
+
+1. No terminal, dentro da pasta `src`, rode:
+    ```
+    pyinstaller --onefile --add-data "calculadora.py;." app.py
+    ```
+2. O executável estará em `src/dist/app.exe`. Basta dar dois cliques para usar!
+
+---
+
+## Observações
+
+- Se for compartilhar o executável, envie também a pasta `dist` gerada pelo PyInstaller.
+- Para rodar em outro computador, pode ser necessário instalar o Visual C++ Redistributable (normalmente já vem no Windows).
 
 # Calculadora NIOSH
 
